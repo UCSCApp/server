@@ -63,9 +63,9 @@ func (table menuTable) parseMenuItems(idx int) []MenuItem {
 	rows := table.Index(idx).Path(MENU_ROWS_PATH)
 	size := rows.Size()
 	items := make([]MenuItem, size)
-	for i := 1; i < size; i++ {
+	for i := 0; i < size ; i++ {
 		menuNameNode := rows.Index(i).Path(ROW_NAME_PATH)
-		items[i-1] = MenuItem{menuNameNode.Inner(0).Data}
+		items[i] = MenuItem{menuNameNode.Inner(0).Data}
 	}
 	return items
 }
