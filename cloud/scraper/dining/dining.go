@@ -64,7 +64,6 @@ func (table menuTable) parseMenuItems(idx int) []MenuItem {
 	size := rows.Size()
 	items := make([]MenuItem, size)
 	for i := 1; i < size; i++ {
-		rows.Index(i).Path(ROW_NAME_PATH).Print()
 		menuNameNode := rows.Index(i).Path(ROW_NAME_PATH)
 		items[i-1] = MenuItem{menuNameNode.Inner(0).Data}
 	}
@@ -107,7 +106,7 @@ func (doc menuDoc) selectMenuTable() menuTable {
 }
 
 func c8Doc() menuDoc {
-	menu, err := scraper.New(WEBSITE)
+	menu, err := scraper.NewFromURL(WEBSITE)
 	failOnError(err)
 	return menuDoc{menu}
 }

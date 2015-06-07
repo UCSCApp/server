@@ -1,6 +1,7 @@
 package scraper
 
 import (
+	"io"
 	"fmt"
 	"github.com/PuerkitoBio/goquery"
 	"golang.org/x/net/html"
@@ -32,8 +33,13 @@ func (sel Selection) PrintChildren() {
 }
 
 
-func New(url string) (Selection, error) {
+func NewFromURL(url string) (Selection, error) {
 	doc, err := goquery.NewDocument(url)
+	return Selection{(*doc).Selection}, err
+}
+
+func NewFromReader(reader io.Reader) (Selection, error) {
+	doc, err := goquery.NewDocumentFromReader(reader)
 	return Selection{(*doc).Selection}, err
 }
 
