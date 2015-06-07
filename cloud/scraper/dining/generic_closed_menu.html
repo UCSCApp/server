@@ -1,0 +1,126 @@
+<!-- The following is required by Aurora Information Systems, DO NOT MODIFY OR REMOVE -->
+   <!-- FIELDFILT.ASP, Version 2.2.1  -->
+<!-- End of Aurora Information Systems Required Text -->
+<html>
+<head>
+<title>UC Santa Cruz Dining Menus</title>
+<link rel="stylesheet" href="foodpro_web_ina.css" type="text/css">
+</head>
+<SCRIPT LANGUAGE=JAVASCRIPT>
+
+function ChangeTitle() {
+  top.frames[0].location.href="head.asp?WeeksMenus=This+Week%27s+Menus&locationNum=10&locationName=Cowell&sName=";
+  top.frames[1].location.href="date.asp?shortflg=1&locationNum=10&locationName=Cowell&sName=&naFlag=";
+}
+var popImg = null
+var popDiag = null
+var curHeight = null
+var curWidth = null
+var popTop = null
+var popLeft = null
+
+function openPopImg(picName,windowWidth,windowHeight) {
+  closePopImg();
+  curHeight=screen.availHeight;
+  curWidth=screen.availWidth;
+  popTop = 75;
+  popLeft = eval(curWidth - 300);
+  popImg=window.open(picName, '_new', "toolbar=no,scrollbars=no,resizable=yes,top=" + popTop + ",left=" + popLeft + ",width=" + (parseInt(windowWidth)+0) + ",height=" + (parseInt(windowHeight)+0));
+}
+function closePopImg(){
+  if(navigator.appName != "Microsoft Internet Explorer" || parseInt(navigator.appVersion) >= 4) if(popImg != null) if(!popImg.closed) popImg.close()
+}
+function setStatus(msg){
+  status = msg;
+  return true;
+}
+
+var newWindowOptions = null
+var newWindowTop = null
+var newWindowLeft = null
+
+function openDescWin(descText, dispName) {  
+  if(descText=="")
+  {     
+     closeDescWin()
+  }
+  else
+  {     
+     newWindowTop = screen.height - (screen.height * 0.75) - 80     
+     newWindowLeft = screen.width - 310;
+     newWindowOptions = "toolbar=no,width=300,height=125,top=" + newWindowTop + ",left=" + newWindowLeft + ",alwaysRaised=yes";     
+     popDiag=window.open("", "Recipe_Desc", newWindowOptions);
+     descText = descText.replace("~","'");
+     dispName = dispName.replace("~","'"); 
+     popDiag.document.write("<html><head><title>" + dispName + "</title><link rel='stylesheet' href='foodpro_web_ina.css' type='text/css'></head><body><div class='menusampproddesc'>" + descText + "</div></body></html>");
+  }
+}
+function closeDescWin(){   
+   if(navigator.appName != "Microsoft Internet Explorer" || parseInt(navigator.appVersion) >= 4) if(popDiag != null) if(!popDiag.closed) popDiag.close();
+}
+</SCRIPT>
+
+
+
+<body class="menusampbody" onLoad="ChangeTitle();" onUnload="closePopImg();">
+
+  <div class="menusamptitle">Menus for Sunday, June 07, 2015</div>
+  
+    <br>
+    <table align="center" border="0" width=60%>
+      <tr>
+        <td><div class="menusampinstructs">No Data Available</div></td>
+      </tr>
+    </table>
+  
+    <table width=100% border="0" align="center"> 
+      <tr>    
+        <td><div class="menusampfooter">The nutrient composition of food may vary due to genetic, environmental and processing variables; changes in product formulation, manufacturer's data, cooking and preparation techniques. The information provided in these labels should be considered as approximations of the nutritional analysis of the food. </div></td>
+      </tr>
+    </table>
+  
+  <br>
+
+  <form>
+  <table align="center" border="0" width=80%>
+    <tr>
+      <td align="center">
+        <input type="button" value="Select a Dining Location" onClick="top.location.href='location.asp';" style="WIDTH: 225px" width="225px"> 
+      </td>
+      
+        <td align="left">
+          <input type="button" value="UC Santa Cruz Dining Home Page" onClick="top.location.href='http://housing.ucsc.edu/dining/index.html';" style="WIDTH: 225px" width="225px">
+        </td>
+      
+    </tr>
+  </table>
+  </form>
+  
+<!-- The following is required by Aurora Information Systems -- DO NOT MODIFY OR REMOVE -->
+  <br>
+  <div class="poweredbyfoodpro">Powered by FoodPro<SUP>&#174;</SUP></div>
+<!-- End of Aurora Information Systems Required Text -->  
+  
+  
+  
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-48253503-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+  
+  
+</body>
+</html>
+
+<!-- The following is required by Aurora Information Systems, DO NOT MODIFY OR REMOVE -->
+   <!-- MENUSAMP.ASP, Version 2.2.3  -->
+<!-- End of Aurora Information Systems Required Text -->

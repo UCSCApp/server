@@ -1,0 +1,1927 @@
+
+
+<!-- The following is required by Aurora Information Systems, DO NOT MODIFY OR REMOVE -->
+   <!-- FIELDFILT.ASP, Version 2.2.1  -->
+<!-- End of Aurora Information Systems Required Text -->
+<html>
+<head>
+<title>UC Santa Cruz Dining Menus</title>
+<link rel="stylesheet" href="foodpro_web_ina.css" type="text/css">
+</head>
+<SCRIPT LANGUAGE=JAVASCRIPT>
+
+function ChangeTitle() {
+  top.frames[0].location.href="head.asp?WeeksMenus=This+Week%27s+Menus&locationNum=30&locationName=College+Eight&sName=";
+  top.frames[1].location.href="date.asp?shortflg=1&locationNum=30&locationName=College+Eight&sName=&naFlag=1";
+}
+var popImg = null
+var popDiag = null
+var curHeight = null
+var curWidth = null
+var popTop = null
+var popLeft = null
+
+function openPopImg(picName,windowWidth,windowHeight) {
+  closePopImg();
+  curHeight=screen.availHeight;
+  curWidth=screen.availWidth;
+  popTop = 75;
+  popLeft = eval(curWidth - 300);
+  popImg=window.open(picName, '_new', "toolbar=no,scrollbars=no,resizable=yes,top=" + popTop + ",left=" + popLeft + ",width=" + (parseInt(windowWidth)+0) + ",height=" + (parseInt(windowHeight)+0));
+}
+function closePopImg(){
+  if(navigator.appName != "Microsoft Internet Explorer" || parseInt(navigator.appVersion) >= 4) if(popImg != null) if(!popImg.closed) popImg.close()
+}
+function setStatus(msg){
+  status = msg;
+  return true;
+}
+
+var newWindowOptions = null
+var newWindowTop = null
+var newWindowLeft = null
+
+function openDescWin(descText, dispName) {  
+  if(descText=="")
+  {     
+     closeDescWin()
+  }
+  else
+  {     
+     newWindowTop = screen.height - (screen.height * 0.75) - 80     
+     newWindowLeft = screen.width - 310;
+     newWindowOptions = "toolbar=no,width=300,height=125,top=" + newWindowTop + ",left=" + newWindowLeft + ",alwaysRaised=yes";     
+     popDiag=window.open("", "Recipe_Desc", newWindowOptions);
+     descText = descText.replace("~","'");
+     dispName = dispName.replace("~","'"); 
+     popDiag.document.write("<html><head><title>" + dispName + "</title><link rel='stylesheet' href='foodpro_web_ina.css' type='text/css'></head><body><div class='menusampproddesc'>" + descText + "</div></body></html>");
+  }
+}
+function closeDescWin(){   
+   if(navigator.appName != "Microsoft Internet Explorer" || parseInt(navigator.appVersion) >= 4) if(popDiag != null) if(!popDiag.closed) popDiag.close();
+}
+</SCRIPT>
+
+
+
+<body class="menusampbody" onLoad="ChangeTitle();" onUnload="closePopImg();">
+
+  <div class="menusamptitle">Menus for Sunday, June 07, 2015</div>
+  <br>
+      <div class="menusampinstructs">&nbsp;&nbsp;</div>
+    
+    <table align="center" border="0" width=85% cellpadding="0" cellspacing="0" bordercolorlight="black" bordercolordark="black" style="padding-left:10px">        
+      
+      <tr>
+        
+        <td valign="top" width=50%>
+          <table border="0" width=100% height=100% cellpadding="0" cellspacing="0">
+            <tr>
+              <td height="15" align="left">
+                <table width=100% cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td width=10%>
+                      <div class="menusampmeals">Lunch</div>
+                    </td>
+                    <td align="left">
+                    <span class="menusampnutritive">&nbsp;&nbsp;
+                      <a href="pickMenu.asp?locationNum=30&locationName=College+Eight&dtdate=06%2F07%2F2015&mealName=Lunch&sName=" name="Lunch"  target="_self" onMouseOver="window.status = 'Click for Nutritive Analysis.'; return true;" onMouseOut="window.status= ' ';">Nutritive Analysis</a></span>
+                    
+                    </td>
+                    <td>&nbsp;
+                      
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>        
+            <tr height="5">
+              <td valign="top">
+              
+                <table width=100% cellpadding="0" cellspacing="1" border="0">
+                
+                  <tr>
+                    <td valign="top" width=95%>
+                       <table width=100% cellpadding="0" cellspacing="0" border="0">
+                          <tr height="30px">
+                             <td height="30px">
+                    
+
+                    <!-- Recipe Name Is Displayed Here -->                    
+                    
+                            <div class="menusamprecipes"><span style="color: #000000">Mushroom & Barley Soup</span></div>
+                    
+
+                            </td>
+                    
+                         </tr>
+                       </table>
+                    </td>
+                    
+                    <td valign="top" width=5%>&nbsp;
+                       
+                    </td>
+                    
+                    <td valign="top" align="right" width=10% colspan="1">
+                    
+                      <div class="menusampprices"><span style="color: #000000">&nbsp;</span></div>
+                    
+                    </td>
+                    <td width=5% valign="top" colspan="1">&nbsp;
+                       
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td valign="top" width=95%>
+                       <table width=100% cellpadding="0" cellspacing="0" border="0">
+                          <tr height="30px">
+                             <td height="30px">
+                    
+
+                    <!-- Recipe Name Is Displayed Here -->                    
+                    
+                            <div class="menusamprecipes"><span style="color: #000000">Stockpot Vegan Chili</span></div>
+                    
+
+                            </td>
+                    
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/vegan.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/soy.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                         </tr>
+                       </table>
+                    </td>
+                    
+                    <td valign="top" width=5%>&nbsp;
+                       
+                    </td>
+                    
+                    <td valign="top" align="right" width=10% colspan="1">
+                    
+                      <div class="menusampprices"><span style="color: #000000">&nbsp;</span></div>
+                    
+                    </td>
+                    <td width=5% valign="top" colspan="1">&nbsp;
+                       
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td valign="top" width=95%>
+                       <table width=100% cellpadding="0" cellspacing="0" border="0">
+                          <tr height="30px">
+                             <td height="30px">
+                    
+
+                    <!-- Recipe Name Is Displayed Here -->                    
+                    
+                            <div class="menusamprecipes"><span style="color: #000000">Apple Crepes Nancy</span></div>
+                    
+
+                            </td>
+                    
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/veggie.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/milk.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/eggs.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                         </tr>
+                       </table>
+                    </td>
+                    
+                    <td valign="top" width=5%>&nbsp;
+                       
+                    </td>
+                    
+                    <td valign="top" align="right" width=10% colspan="1">
+                    
+                      <div class="menusampprices"><span style="color: #000000">&nbsp;</span></div>
+                    
+                    </td>
+                    <td width=5% valign="top" colspan="1">&nbsp;
+                       
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td valign="top" width=95%>
+                       <table width=100% cellpadding="0" cellspacing="0" border="0">
+                          <tr height="30px">
+                             <td height="30px">
+                    
+
+                    <!-- Recipe Name Is Displayed Here -->                    
+                    
+                            <div class="menusamprecipes"><span style="color: #000000">Cage Free Scrambled Eggs</span></div>
+                    
+
+                            </td>
+                    
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/eggs.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/gluten.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/veggie.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                         </tr>
+                       </table>
+                    </td>
+                    
+                    <td valign="top" width=5%>&nbsp;
+                       
+                    </td>
+                    
+                    <td valign="top" align="right" width=10% colspan="1">
+                    
+                      <div class="menusampprices"><span style="color: #000000">&nbsp;</span></div>
+                    
+                    </td>
+                    <td width=5% valign="top" colspan="1">&nbsp;
+                       
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td valign="top" width=95%>
+                       <table width=100% cellpadding="0" cellspacing="0" border="0">
+                          <tr height="30px">
+                             <td height="30px">
+                    
+
+                    <!-- Recipe Name Is Displayed Here -->                    
+                    
+                            <div class="menusamprecipes"><span style="color: #000000">Eggs Benedict</span></div>
+                    
+
+                            </td>
+                    
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/pork.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/eggs.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/milk.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                         </tr>
+                       </table>
+                    </td>
+                    
+                    <td valign="top" width=5%>&nbsp;
+                       
+                    </td>
+                    
+                    <td valign="top" align="right" width=10% colspan="1">
+                    
+                      <div class="menusampprices"><span style="color: #000000">&nbsp;</span></div>
+                    
+                    </td>
+                    <td width=5% valign="top" colspan="1">&nbsp;
+                       
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td valign="top" width=95%>
+                       <table width=100% cellpadding="0" cellspacing="0" border="0">
+                          <tr height="30px">
+                             <td height="30px">
+                    
+
+                    <!-- Recipe Name Is Displayed Here -->                    
+                    
+                            <div class="menusamprecipes"><span style="color: #000000">Hard cooked Cage Free Eggs</span></div>
+                    
+
+                            </td>
+                    
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/eggs.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/gluten.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/veggie.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                         </tr>
+                       </table>
+                    </td>
+                    
+                    <td valign="top" width=5%>&nbsp;
+                       
+                    </td>
+                    
+                    <td valign="top" align="right" width=10% colspan="1">
+                    
+                      <div class="menusampprices"><span style="color: #000000">&nbsp;</span></div>
+                    
+                    </td>
+                    <td width=5% valign="top" colspan="1">&nbsp;
+                       
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td valign="top" width=95%>
+                       <table width=100% cellpadding="0" cellspacing="0" border="0">
+                          <tr height="30px">
+                             <td height="30px">
+                    
+
+                    <!-- Recipe Name Is Displayed Here -->                    
+                    
+                            <div class="menusamprecipes"><span style="color: #000000">Natural BridgesTofu Scramble</span></div>
+                    
+
+                            </td>
+                    
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/soy.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/vegan.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/gluten.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                         </tr>
+                       </table>
+                    </td>
+                    
+                    <td valign="top" width=5%>&nbsp;
+                       
+                    </td>
+                    
+                    <td valign="top" align="right" width=10% colspan="1">
+                    
+                      <div class="menusampprices"><span style="color: #000000">&nbsp;</span></div>
+                    
+                    </td>
+                    <td width=5% valign="top" colspan="1">&nbsp;
+                       
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td valign="top" width=95%>
+                       <table width=100% cellpadding="0" cellspacing="0" border="0">
+                          <tr height="30px">
+                             <td height="30px">
+                    
+
+                    <!-- Recipe Name Is Displayed Here -->                    
+                    
+                            <div class="menusamprecipes"><span style="color: #000000">Oatmeal Gluten-Free</span></div>
+                    
+
+                            </td>
+                    
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/vegan.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/gluten.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                         </tr>
+                       </table>
+                    </td>
+                    
+                    <td valign="top" width=5%>&nbsp;
+                       
+                    </td>
+                    
+                    <td valign="top" align="right" width=10% colspan="1">
+                    
+                      <div class="menusampprices"><span style="color: #000000">&nbsp;</span></div>
+                    
+                    </td>
+                    <td width=5% valign="top" colspan="1">&nbsp;
+                       
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td valign="top" width=95%>
+                       <table width=100% cellpadding="0" cellspacing="0" border="0">
+                          <tr height="30px">
+                             <td height="30px">
+                    
+
+                    <!-- Recipe Name Is Displayed Here -->                    
+                    
+                            <div class="menusamprecipes"><span style="color: #000000">Tator Tots</span></div>
+                    
+
+                            </td>
+                    
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/soy.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/vegan.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                         </tr>
+                       </table>
+                    </td>
+                    
+                    <td valign="top" width=5%>&nbsp;
+                       
+                    </td>
+                    
+                    <td valign="top" align="right" width=10% colspan="1">
+                    
+                      <div class="menusampprices"><span style="color: #000000">&nbsp;</span></div>
+                    
+                    </td>
+                    <td width=5% valign="top" colspan="1">&nbsp;
+                       
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td valign="top" width=95%>
+                       <table width=100% cellpadding="0" cellspacing="0" border="0">
+                          <tr height="30px">
+                             <td height="30px">
+                    
+
+                    <!-- Recipe Name Is Displayed Here -->                    
+                    
+                            <div class="menusamprecipes"><span style="color: #000000">3 Berry Muffin</span></div>
+                    
+
+                            </td>
+                    
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/eggs.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/milk.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/soy.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                         </tr>
+                       </table>
+                    </td>
+                    
+                    <td valign="top" width=5%>&nbsp;
+                       
+                    </td>
+                    
+                    <td valign="top" align="right" width=10% colspan="1">
+                    
+                      <div class="menusampprices"><span style="color: #000000">&nbsp;</span></div>
+                    
+                    </td>
+                    <td width=5% valign="top" colspan="1">&nbsp;
+                       
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td valign="top" width=95%>
+                       <table width=100% cellpadding="0" cellspacing="0" border="0">
+                          <tr height="30px">
+                             <td height="30px">
+                    
+
+                    <!-- Recipe Name Is Displayed Here -->                    
+                    
+                            <div class="menusamprecipes"><span style="color: #000000">Blueberry Muffin</span></div>
+                    
+
+                            </td>
+                    
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/eggs.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/milk.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/soy.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                         </tr>
+                       </table>
+                    </td>
+                    
+                    <td valign="top" width=5%>&nbsp;
+                       
+                    </td>
+                    
+                    <td valign="top" align="right" width=10% colspan="1">
+                    
+                      <div class="menusampprices"><span style="color: #000000">&nbsp;</span></div>
+                    
+                    </td>
+                    <td width=5% valign="top" colspan="1">&nbsp;
+                       
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td valign="top" width=95%>
+                       <table width=100% cellpadding="0" cellspacing="0" border="0">
+                          <tr height="30px">
+                             <td height="30px">
+                    
+
+                    <!-- Recipe Name Is Displayed Here -->                    
+                    
+                            <div class="menusamprecipes"><span style="color: #000000">Cowboy Cookies</span></div>
+                    
+
+                            </td>
+                    
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/eggs.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/soy.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                         </tr>
+                       </table>
+                    </td>
+                    
+                    <td valign="top" width=5%>&nbsp;
+                       
+                    </td>
+                    
+                    <td valign="top" align="right" width=10% colspan="1">
+                    
+                      <div class="menusampprices"><span style="color: #000000">&nbsp;</span></div>
+                    
+                    </td>
+                    <td width=5% valign="top" colspan="1">&nbsp;
+                       
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td valign="top" width=95%>
+                       <table width=100% cellpadding="0" cellspacing="0" border="0">
+                          <tr height="30px">
+                             <td height="30px">
+                    
+
+                    <!-- Recipe Name Is Displayed Here -->                    
+                    
+                            <div class="menusamprecipes"><span style="color: #000000">Donut Raised</span></div>
+                    
+
+                            </td>
+                    
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/soy.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/milk.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/eggs.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/veggie.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                         </tr>
+                       </table>
+                    </td>
+                    
+                    <td valign="top" width=5%>&nbsp;
+                       
+                    </td>
+                    
+                    <td valign="top" align="right" width=10% colspan="1">
+                    
+                      <div class="menusampprices"><span style="color: #000000">&nbsp;</span></div>
+                    
+                    </td>
+                    <td width=5% valign="top" colspan="1">&nbsp;
+                       
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td valign="top" width=95%>
+                       <table width=100% cellpadding="0" cellspacing="0" border="0">
+                          <tr height="30px">
+                             <td height="30px">
+                    
+
+                    <!-- Recipe Name Is Displayed Here -->                    
+                    
+                            <div class="menusamprecipes"><span style="color: #000000">French Rolls</span></div>
+                    
+
+                            </td>
+                    
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/vegan.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/soy.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                         </tr>
+                       </table>
+                    </td>
+                    
+                    <td valign="top" width=5%>&nbsp;
+                       
+                    </td>
+                    
+                    <td valign="top" align="right" width=10% colspan="1">
+                    
+                      <div class="menusampprices"><span style="color: #000000">&nbsp;</span></div>
+                    
+                    </td>
+                    <td width=5% valign="top" colspan="1">&nbsp;
+                       
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td valign="top" width=95%>
+                       <table width=100% cellpadding="0" cellspacing="0" border="0">
+                          <tr height="30px">
+                             <td height="30px">
+                    
+
+                    <!-- Recipe Name Is Displayed Here -->                    
+                    
+                            <div class="menusamprecipes"><span style="color: #000000">Nutella Cheese Danish</span></div>
+                    
+
+                            </td>
+                    
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/eggs.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/milk.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/soy.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                         </tr>
+                       </table>
+                    </td>
+                    
+                    <td valign="top" width=5%>&nbsp;
+                       
+                    </td>
+                    
+                    <td valign="top" align="right" width=10% colspan="1">
+                    
+                      <div class="menusampprices"><span style="color: #000000">&nbsp;</span></div>
+                    
+                    </td>
+                    <td width=5% valign="top" colspan="1">&nbsp;
+                       
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td valign="top" width=95%>
+                       <table width=100% cellpadding="0" cellspacing="0" border="0">
+                          <tr height="30px">
+                             <td height="30px">
+                    
+
+                    <!-- Recipe Name Is Displayed Here -->                    
+                    
+                            <div class="menusamprecipes"><span style="color: #000000">Orange Cream Cheese Spice Cake</span></div>
+                    
+
+                            </td>
+                    
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/eggs.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/soy.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/milk.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                         </tr>
+                       </table>
+                    </td>
+                    
+                    <td valign="top" width=5%>&nbsp;
+                       
+                    </td>
+                    
+                    <td valign="top" align="right" width=10% colspan="1">
+                    
+                      <div class="menusampprices"><span style="color: #000000">&nbsp;</span></div>
+                    
+                    </td>
+                    <td width=5% valign="top" colspan="1">&nbsp;
+                       
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td valign="top" width=95%>
+                       <table width=100% cellpadding="0" cellspacing="0" border="0">
+                          <tr height="30px">
+                             <td height="30px">
+                    
+
+                    <!-- Recipe Name Is Displayed Here -->                    
+                    
+                            <div class="menusamprecipes"><span style="color: #000000">Paul's Vegan Cookies</span></div>
+                    
+
+                            </td>
+                    
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/vegan.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/nuts.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/soy.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                         </tr>
+                       </table>
+                    </td>
+                    
+                    <td valign="top" width=5%>&nbsp;
+                       
+                    </td>
+                    
+                    <td valign="top" align="right" width=10% colspan="1">
+                    
+                      <div class="menusampprices"><span style="color: #000000">&nbsp;</span></div>
+                    
+                    </td>
+                    <td width=5% valign="top" colspan="1">&nbsp;
+                       
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td valign="top" width=95%>
+                       <table width=100% cellpadding="0" cellspacing="0" border="0">
+                          <tr height="30px">
+                             <td height="30px">
+                    
+
+                    <!-- Recipe Name Is Displayed Here -->                    
+                    
+                            <div class="menusamprecipes"><span style="color: #008000">Bar Pasta</span></div>
+                    
+
+                            </td>
+                    
+                         </tr>
+                       </table>
+                    </td>
+                    
+                    <td valign="top" width=5%>&nbsp;
+                       
+                    </td>
+                    
+                    <td valign="top" align="right" width=10% colspan="1">
+                    
+                      <div class="menusampprices"><span style="color: #008000">&nbsp;</span></div>
+                    
+                    </td>
+                    <td width=5% valign="top" colspan="1">&nbsp;
+                       
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td valign="top" width=95%>
+                       <table width=100% cellpadding="0" cellspacing="0" border="0">
+                          <tr height="30px">
+                             <td height="30px">
+                    
+
+                    <!-- Recipe Name Is Displayed Here -->                    
+                    
+                            <div class="menusamprecipes"><span style="color: #000000">Bread Sticks</span></div>
+                    
+
+                            </td>
+                    
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/vegan.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                         </tr>
+                       </table>
+                    </td>
+                    
+                    <td valign="top" width=5%>&nbsp;
+                       
+                    </td>
+                    
+                    <td valign="top" align="right" width=10% colspan="1">
+                    
+                      <div class="menusampprices"><span style="color: #000000">&nbsp;</span></div>
+                    
+                    </td>
+                    <td width=5% valign="top" colspan="1">&nbsp;
+                       
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td valign="top" width=95%>
+                       <table width=100% cellpadding="0" cellspacing="0" border="0">
+                          <tr height="30px">
+                             <td height="30px">
+                    
+
+                    <!-- Recipe Name Is Displayed Here -->                    
+                    
+                            <div class="menusamprecipes"><span style="color: #000000">Cheese Manicotti with Marinara</span></div>
+                    
+
+                            </td>
+                    
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/milk.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/eggs.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/soy.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/veggie.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                         </tr>
+                       </table>
+                    </td>
+                    
+                    <td valign="top" width=5%>&nbsp;
+                       
+                    </td>
+                    
+                    <td valign="top" align="right" width=10% colspan="1">
+                    
+                      <div class="menusampprices"><span style="color: #000000">&nbsp;</span></div>
+                    
+                    </td>
+                    <td width=5% valign="top" colspan="1">&nbsp;
+                       
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td valign="top" width=95%>
+                       <table width=100% cellpadding="0" cellspacing="0" border="0">
+                          <tr height="30px">
+                             <td height="30px">
+                    
+
+                    <!-- Recipe Name Is Displayed Here -->                    
+                    
+                            <div class="menusamprecipes"><span style="color: #000000">Condiments</span></div>
+                    
+
+                            </td>
+                    
+                         </tr>
+                       </table>
+                    </td>
+                    
+                    <td valign="top" width=5%>&nbsp;
+                       
+                    </td>
+                    
+                    <td valign="top" align="right" width=10% colspan="1">
+                    
+                      <div class="menusampprices"><span style="color: #000000">&nbsp;</span></div>
+                    
+                    </td>
+                    <td width=5% valign="top" colspan="1">&nbsp;
+                       
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td valign="top" width=95%>
+                       <table width=100% cellpadding="0" cellspacing="0" border="0">
+                          <tr height="30px">
+                             <td height="30px">
+                    
+
+                    <!-- Recipe Name Is Displayed Here -->                    
+                    
+                            <div class="menusamprecipes"><span style="color: #000000">Marinara Sauce</span></div>
+                    
+
+                            </td>
+                    
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/soy.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/vegan.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                         </tr>
+                       </table>
+                    </td>
+                    
+                    <td valign="top" width=5%>&nbsp;
+                       
+                    </td>
+                    
+                    <td valign="top" align="right" width=10% colspan="1">
+                    
+                      <div class="menusampprices"><span style="color: #000000">&nbsp;</span></div>
+                    
+                    </td>
+                    <td width=5% valign="top" colspan="1">&nbsp;
+                       
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td valign="top" width=95%>
+                       <table width=100% cellpadding="0" cellspacing="0" border="0">
+                          <tr height="30px">
+                             <td height="30px">
+                    
+
+                    <!-- Recipe Name Is Displayed Here -->                    
+                    
+                            <div class="menusamprecipes"><span style="color: #000000">Meatballs</span></div>
+                    
+
+                            </td>
+                    
+                         </tr>
+                       </table>
+                    </td>
+                    
+                    <td valign="top" width=5%>&nbsp;
+                       
+                    </td>
+                    
+                    <td valign="top" align="right" width=10% colspan="1">
+                    
+                      <div class="menusampprices"><span style="color: #000000">&nbsp;</span></div>
+                    
+                    </td>
+                    <td width=5% valign="top" colspan="1">&nbsp;
+                       
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td valign="top" width=95%>
+                       <table width=100% cellpadding="0" cellspacing="0" border="0">
+                          <tr height="30px">
+                             <td height="30px">
+                    
+
+                    <!-- Recipe Name Is Displayed Here -->                    
+                    
+                            <div class="menusamprecipes"><span style="color: #000000">Pasta Bar</span></div>
+                    
+
+                            </td>
+                    
+                         </tr>
+                       </table>
+                    </td>
+                    
+                    <td valign="top" width=5%>&nbsp;
+                       
+                    </td>
+                    
+                    <td valign="top" align="right" width=10% colspan="1">
+                    
+                      <div class="menusampprices"><span style="color: #000000">&nbsp;</span></div>
+                    
+                    </td>
+                    <td width=5% valign="top" colspan="1">&nbsp;
+                       
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td valign="top" width=95%>
+                       <table width=100% cellpadding="0" cellspacing="0" border="0">
+                          <tr height="30px">
+                             <td height="30px">
+                    
+
+                    <!-- Recipe Name Is Displayed Here -->                    
+                    
+                            <div class="menusamprecipes"><span style="color: #000000">Penne</span></div>
+                    
+
+                            </td>
+                    
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/milk.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/veggie.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                         </tr>
+                       </table>
+                    </td>
+                    
+                    <td valign="top" width=5%>&nbsp;
+                       
+                    </td>
+                    
+                    <td valign="top" align="right" width=10% colspan="1">
+                    
+                      <div class="menusampprices"><span style="color: #000000">&nbsp;</span></div>
+                    
+                    </td>
+                    <td width=5% valign="top" colspan="1">&nbsp;
+                       
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td valign="top" width=95%>
+                       <table width=100% cellpadding="0" cellspacing="0" border="0">
+                          <tr height="30px">
+                             <td height="30px">
+                    
+
+                    <!-- Recipe Name Is Displayed Here -->                    
+                    
+                            <div class="menusamprecipes"><span style="color: #000000">Puttanesca Sauce</span></div>
+                    
+
+                            </td>
+                    
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/soy.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/vegan.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/gluten.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                         </tr>
+                       </table>
+                    </td>
+                    
+                    <td valign="top" width=5%>&nbsp;
+                       
+                    </td>
+                    
+                    <td valign="top" align="right" width=10% colspan="1">
+                    
+                      <div class="menusampprices"><span style="color: #000000">&nbsp;</span></div>
+                    
+                    </td>
+                    <td width=5% valign="top" colspan="1">&nbsp;
+                       
+                    </td>
+                  </tr>
+                  
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+        
+        <td valign="top" width=50%>
+          <table border="0" width=100% height=100% cellpadding="0" cellspacing="0">
+            <tr>
+              <td height="15" align="left">
+                <table width=100% cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td width=10%>
+                      <div class="menusampmeals">Dinner</div>
+                    </td>
+                    <td align="left">
+                    <span class="menusampnutritive">&nbsp;&nbsp;
+                      <a href="pickMenu.asp?locationNum=30&locationName=College+Eight&dtdate=06%2F07%2F2015&mealName=Dinner&sName=" name="Dinner"  target="_self" onMouseOver="window.status = 'Click for Nutritive Analysis.'; return true;" onMouseOut="window.status= ' ';">Nutritive Analysis</a></span>
+                    
+                    </td>
+                    <td>&nbsp;
+                      
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>        
+            <tr height="5">
+              <td valign="top">
+              
+                <table width=100% cellpadding="0" cellspacing="1" border="0">
+                
+                  <tr>
+                    <td valign="top" width=95%>
+                       <table width=100% cellpadding="0" cellspacing="0" border="0">
+                          <tr height="30px">
+                             <td height="30px">
+                    
+
+                    <!-- Recipe Name Is Displayed Here -->                    
+                    
+                            <div class="menusamprecipes"><span style="color: #000000">Korean BBQ Pork Spareribs</span></div>
+                    
+
+                            </td>
+                    
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/pork.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/soy.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                         </tr>
+                       </table>
+                    </td>
+                    
+                    <td valign="top" width=5%>&nbsp;
+                       
+                    </td>
+                    
+                    <td valign="top" align="right" width=10% colspan="1">
+                    
+                      <div class="menusampprices"><span style="color: #000000">&nbsp;</span></div>
+                    
+                    </td>
+                    <td width=5% valign="top" colspan="1">&nbsp;
+                       
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td valign="top" width=95%>
+                       <table width=100% cellpadding="0" cellspacing="0" border="0">
+                          <tr height="30px">
+                             <td height="30px">
+                    
+
+                    <!-- Recipe Name Is Displayed Here -->                    
+                    
+                            <div class="menusamprecipes"><span style="color: #000000">Sizzling Thai Chicken Salad</span></div>
+                    
+
+                            </td>
+                    
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/soy.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                         </tr>
+                       </table>
+                    </td>
+                    
+                    <td valign="top" width=5%>&nbsp;
+                       
+                    </td>
+                    
+                    <td valign="top" align="right" width=10% colspan="1">
+                    
+                      <div class="menusampprices"><span style="color: #000000">&nbsp;</span></div>
+                    
+                    </td>
+                    <td width=5% valign="top" colspan="1">&nbsp;
+                       
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td valign="top" width=95%>
+                       <table width=100% cellpadding="0" cellspacing="0" border="0">
+                          <tr height="30px">
+                             <td height="30px">
+                    
+
+                    <!-- Recipe Name Is Displayed Here -->                    
+                    
+                            <div class="menusamprecipes"><span style="color: #000000">Sizzling Thai Seitan Salad</span></div>
+                    
+
+                            </td>
+                    
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/soy.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/vegan.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                         </tr>
+                       </table>
+                    </td>
+                    
+                    <td valign="top" width=5%>&nbsp;
+                       
+                    </td>
+                    
+                    <td valign="top" align="right" width=10% colspan="1">
+                    
+                      <div class="menusampprices"><span style="color: #000000">&nbsp;</span></div>
+                    
+                    </td>
+                    <td width=5% valign="top" colspan="1">&nbsp;
+                       
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td valign="top" width=95%>
+                       <table width=100% cellpadding="0" cellspacing="0" border="0">
+                          <tr height="30px">
+                             <td height="30px">
+                    
+
+                    <!-- Recipe Name Is Displayed Here -->                    
+                    
+                            <div class="menusamprecipes"><span style="color: #000000">5 Spice BBQ Beef Chow Mein</span></div>
+                    
+
+                            </td>
+                    
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/beef.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/soy.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                         </tr>
+                       </table>
+                    </td>
+                    
+                    <td valign="top" width=5%>&nbsp;
+                       
+                    </td>
+                    
+                    <td valign="top" align="right" width=10% colspan="1">
+                    
+                      <div class="menusampprices"><span style="color: #000000">&nbsp;</span></div>
+                    
+                    </td>
+                    <td width=5% valign="top" colspan="1">&nbsp;
+                       
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td valign="top" width=95%>
+                       <table width=100% cellpadding="0" cellspacing="0" border="0">
+                          <tr height="30px">
+                             <td height="30px">
+                    
+
+                    <!-- Recipe Name Is Displayed Here -->                    
+                    
+                            <div class="menusamprecipes"><span style="color: #000000">5 Spice BBQ Tofu Chow Mein</span></div>
+                    
+
+                            </td>
+                    
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/soy.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/vegan.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                         </tr>
+                       </table>
+                    </td>
+                    
+                    <td valign="top" width=5%>&nbsp;
+                       
+                    </td>
+                    
+                    <td valign="top" align="right" width=10% colspan="1">
+                    
+                      <div class="menusampprices"><span style="color: #000000">&nbsp;</span></div>
+                    
+                    </td>
+                    <td width=5% valign="top" colspan="1">&nbsp;
+                       
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td valign="top" width=95%>
+                       <table width=100% cellpadding="0" cellspacing="0" border="0">
+                          <tr height="30px">
+                             <td height="30px">
+                    
+
+                    <!-- Recipe Name Is Displayed Here -->                    
+                    
+                            <div class="menusamprecipes"><span style="color: #000000">Veggie Fried Rice</span></div>
+                    
+
+                            </td>
+                    
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/soy.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/eggs.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/veggie.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/gluten.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                         </tr>
+                       </table>
+                    </td>
+                    
+                    <td valign="top" width=5%>&nbsp;
+                       
+                    </td>
+                    
+                    <td valign="top" align="right" width=10% colspan="1">
+                    
+                      <div class="menusampprices"><span style="color: #000000">&nbsp;</span></div>
+                    
+                    </td>
+                    <td width=5% valign="top" colspan="1">&nbsp;
+                       
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td valign="top" width=95%>
+                       <table width=100% cellpadding="0" cellspacing="0" border="0">
+                          <tr height="30px">
+                             <td height="30px">
+                    
+
+                    <!-- Recipe Name Is Displayed Here -->                    
+                    
+                            <div class="menusamprecipes"><span style="color: #000000">Chocolate Cream Pie</span></div>
+                    
+
+                            </td>
+                    
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/eggs.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/milk.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/soy.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                         </tr>
+                       </table>
+                    </td>
+                    
+                    <td valign="top" width=5%>&nbsp;
+                       
+                    </td>
+                    
+                    <td valign="top" align="right" width=10% colspan="1">
+                    
+                      <div class="menusampprices"><span style="color: #000000">&nbsp;</span></div>
+                    
+                    </td>
+                    <td width=5% valign="top" colspan="1">&nbsp;
+                       
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td valign="top" width=95%>
+                       <table width=100% cellpadding="0" cellspacing="0" border="0">
+                          <tr height="30px">
+                             <td height="30px">
+                    
+
+                    <!-- Recipe Name Is Displayed Here -->                    
+                    
+                            <div class="menusamprecipes"><span style="color: #000000">French Rolls</span></div>
+                    
+
+                            </td>
+                    
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/vegan.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/soy.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                         </tr>
+                       </table>
+                    </td>
+                    
+                    <td valign="top" width=5%>&nbsp;
+                       
+                    </td>
+                    
+                    <td valign="top" align="right" width=10% colspan="1">
+                    
+                      <div class="menusampprices"><span style="color: #000000">&nbsp;</span></div>
+                    
+                    </td>
+                    <td width=5% valign="top" colspan="1">&nbsp;
+                       
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td valign="top" width=95%>
+                       <table width=100% cellpadding="0" cellspacing="0" border="0">
+                          <tr height="30px">
+                             <td height="30px">
+                    
+
+                    <!-- Recipe Name Is Displayed Here -->                    
+                    
+                            <div class="menusamprecipes"><span style="color: #000000">Orange Cream Cheese Spice Cake</span></div>
+                    
+
+                            </td>
+                    
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/eggs.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/soy.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/milk.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                         </tr>
+                       </table>
+                    </td>
+                    
+                    <td valign="top" width=5%>&nbsp;
+                       
+                    </td>
+                    
+                    <td valign="top" align="right" width=10% colspan="1">
+                    
+                      <div class="menusampprices"><span style="color: #000000">&nbsp;</span></div>
+                    
+                    </td>
+                    <td width=5% valign="top" colspan="1">&nbsp;
+                       
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td valign="top" width=95%>
+                       <table width=100% cellpadding="0" cellspacing="0" border="0">
+                          <tr height="30px">
+                             <td height="30px">
+                    
+
+                    <!-- Recipe Name Is Displayed Here -->                    
+                    
+                            <div class="menusamprecipes"><span style="color: #008000">Bar Pasta</span></div>
+                    
+
+                            </td>
+                    
+                         </tr>
+                       </table>
+                    </td>
+                    
+                    <td valign="top" width=5%>&nbsp;
+                       
+                    </td>
+                    
+                    <td valign="top" align="right" width=10% colspan="1">
+                    
+                      <div class="menusampprices"><span style="color: #008000">&nbsp;</span></div>
+                    
+                    </td>
+                    <td width=5% valign="top" colspan="1">&nbsp;
+                       
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td valign="top" width=95%>
+                       <table width=100% cellpadding="0" cellspacing="0" border="0">
+                          <tr height="30px">
+                             <td height="30px">
+                    
+
+                    <!-- Recipe Name Is Displayed Here -->                    
+                    
+                            <div class="menusamprecipes"><span style="color: #000000">Bread Sticks</span></div>
+                    
+
+                            </td>
+                    
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/vegan.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                         </tr>
+                       </table>
+                    </td>
+                    
+                    <td valign="top" width=5%>&nbsp;
+                       
+                    </td>
+                    
+                    <td valign="top" align="right" width=10% colspan="1">
+                    
+                      <div class="menusampprices"><span style="color: #000000">&nbsp;</span></div>
+                    
+                    </td>
+                    <td width=5% valign="top" colspan="1">&nbsp;
+                       
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td valign="top" width=95%>
+                       <table width=100% cellpadding="0" cellspacing="0" border="0">
+                          <tr height="30px">
+                             <td height="30px">
+                    
+
+                    <!-- Recipe Name Is Displayed Here -->                    
+                    
+                            <div class="menusamprecipes"><span style="color: #000000">Cheese Manicotti with Marinara</span></div>
+                    
+
+                            </td>
+                    
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/milk.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/eggs.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/soy.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/veggie.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                         </tr>
+                       </table>
+                    </td>
+                    
+                    <td valign="top" width=5%>&nbsp;
+                       
+                    </td>
+                    
+                    <td valign="top" align="right" width=10% colspan="1">
+                    
+                      <div class="menusampprices"><span style="color: #000000">&nbsp;</span></div>
+                    
+                    </td>
+                    <td width=5% valign="top" colspan="1">&nbsp;
+                       
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td valign="top" width=95%>
+                       <table width=100% cellpadding="0" cellspacing="0" border="0">
+                          <tr height="30px">
+                             <td height="30px">
+                    
+
+                    <!-- Recipe Name Is Displayed Here -->                    
+                    
+                            <div class="menusamprecipes"><span style="color: #000000">Condiments</span></div>
+                    
+
+                            </td>
+                    
+                         </tr>
+                       </table>
+                    </td>
+                    
+                    <td valign="top" width=5%>&nbsp;
+                       
+                    </td>
+                    
+                    <td valign="top" align="right" width=10% colspan="1">
+                    
+                      <div class="menusampprices"><span style="color: #000000">&nbsp;</span></div>
+                    
+                    </td>
+                    <td width=5% valign="top" colspan="1">&nbsp;
+                       
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td valign="top" width=95%>
+                       <table width=100% cellpadding="0" cellspacing="0" border="0">
+                          <tr height="30px">
+                             <td height="30px">
+                    
+
+                    <!-- Recipe Name Is Displayed Here -->                    
+                    
+                            <div class="menusamprecipes"><span style="color: #000000">Marinara Sauce</span></div>
+                    
+
+                            </td>
+                    
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/soy.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/vegan.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                         </tr>
+                       </table>
+                    </td>
+                    
+                    <td valign="top" width=5%>&nbsp;
+                       
+                    </td>
+                    
+                    <td valign="top" align="right" width=10% colspan="1">
+                    
+                      <div class="menusampprices"><span style="color: #000000">&nbsp;</span></div>
+                    
+                    </td>
+                    <td width=5% valign="top" colspan="1">&nbsp;
+                       
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td valign="top" width=95%>
+                       <table width=100% cellpadding="0" cellspacing="0" border="0">
+                          <tr height="30px">
+                             <td height="30px">
+                    
+
+                    <!-- Recipe Name Is Displayed Here -->                    
+                    
+                            <div class="menusamprecipes"><span style="color: #000000">Meatballs</span></div>
+                    
+
+                            </td>
+                    
+                         </tr>
+                       </table>
+                    </td>
+                    
+                    <td valign="top" width=5%>&nbsp;
+                       
+                    </td>
+                    
+                    <td valign="top" align="right" width=10% colspan="1">
+                    
+                      <div class="menusampprices"><span style="color: #000000">&nbsp;</span></div>
+                    
+                    </td>
+                    <td width=5% valign="top" colspan="1">&nbsp;
+                       
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td valign="top" width=95%>
+                       <table width=100% cellpadding="0" cellspacing="0" border="0">
+                          <tr height="30px">
+                             <td height="30px">
+                    
+
+                    <!-- Recipe Name Is Displayed Here -->                    
+                    
+                            <div class="menusamprecipes"><span style="color: #000000">Penne</span></div>
+                    
+
+                            </td>
+                    
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/milk.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/veggie.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                         </tr>
+                       </table>
+                    </td>
+                    
+                    <td valign="top" width=5%>&nbsp;
+                       
+                    </td>
+                    
+                    <td valign="top" align="right" width=10% colspan="1">
+                    
+                      <div class="menusampprices"><span style="color: #000000">&nbsp;</span></div>
+                    
+                    </td>
+                    <td width=5% valign="top" colspan="1">&nbsp;
+                       
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td valign="top" width=95%>
+                       <table width=100% cellpadding="0" cellspacing="0" border="0">
+                          <tr height="30px">
+                             <td height="30px">
+                    
+
+                    <!-- Recipe Name Is Displayed Here -->                    
+                    
+                            <div class="menusamprecipes"><span style="color: #000000">Puttanesca Sauce</span></div>
+                    
+
+                            </td>
+                    
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/soy.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/vegan.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                            <td width="10%" height="30px" valign="top">
+                               <img src="LegendImages/gluten.gif" alt="" width="25" height="25" align="bottom">
+                            </td>
+                      
+                         </tr>
+                       </table>
+                    </td>
+                    
+                    <td valign="top" width=5%>&nbsp;
+                       
+                    </td>
+                    
+                    <td valign="top" align="right" width=10% colspan="1">
+                    
+                      <div class="menusampprices"><span style="color: #000000">&nbsp;</span></div>
+                    
+                    </td>
+                    <td width=5% valign="top" colspan="1">&nbsp;
+                       
+                    </td>
+                  </tr>
+                  
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+        
+    </table>
+  
+    <table width=100% border="0" align="center"> 
+      <tr>    
+        <td><div class="menusampfooter">The nutrient composition of food may vary due to genetic, environmental and processing variables; changes in product formulation, manufacturer's data, cooking and preparation techniques. The information provided in these labels should be considered as approximations of the nutritional analysis of the food. </div></td>
+      </tr>
+    </table>
+  
+  <br>
+
+  <form>
+  <table align="center" border="0" width=80%>
+    <tr>
+      <td align="center">
+        <input type="button" value="Select a Dining Location" onClick="top.location.href='location.asp';" style="WIDTH: 225px" width="225px"> 
+      </td>
+      
+        <td align="left">
+          <input type="button" value="UC Santa Cruz Dining Home Page" onClick="top.location.href='http://housing.ucsc.edu/dining/index.html';" style="WIDTH: 225px" width="225px">
+        </td>
+      
+    </tr>
+  </table>
+  </form>
+  
+<!-- The following is required by Aurora Information Systems -- DO NOT MODIFY OR REMOVE -->
+  <br>
+  <div class="poweredbyfoodpro">Powered by FoodPro<SUP>&#174;</SUP></div>
+<!-- End of Aurora Information Systems Required Text -->  
+  
+  
+  
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-48253503-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+  
+  
+</body>
+</html>
+
+<!-- The following is required by Aurora Information Systems, DO NOT MODIFY OR REMOVE -->
+   <!-- MENUSAMP.ASP, Version 2.2.3  -->
+<!-- End of Aurora Information Systems Required Text -->
+
+ 
