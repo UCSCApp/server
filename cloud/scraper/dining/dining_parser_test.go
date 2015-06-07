@@ -3,22 +3,17 @@ package dining
 import (
 	"testing"
 	"os"
+	"fmt"
 	"github.com/ucscstudentapp/cloud/scraper"
 )
 
-type testStruct struct {
-	Breakfast []MenuItem
-	Lunch []MenuItem
-	Dinner []MenuItem
-}
-
 var (
-	closedDiningHall = testStruct{
+	closedDiningHall = Menu{
 		nil,
 		nil,
 		nil,
 	}
-	weekendDiningHall = testStruct{
+	weekendDiningHall = Menu{
 		nil,
 		[]MenuItem{{"Mushroom & Barley Soup"},
 			{"Stockpot Vegan Chili"},
@@ -81,13 +76,13 @@ func EqualMenuItems(this, that []MenuItem) bool {
 	return true
 }
 
-func EqualTestStruct(this, that testStruct) bool {
+func EqualTestStruct(this, that Menu) bool {
 	return EqualMenuItems(this.Breakfast, that.Breakfast) &&
 	       EqualMenuItems(this.Lunch, that.Lunch) &&
 	       EqualMenuItems(this.Dinner, that.Dinner)
 }
 
-func htmlFileTest(t *testing.T, path string, expected testStruct) {
+func htmlFileTest(t *testing.T, path string, expected Menu) {
 	read, err := os.Open(path)
 	if err != nil {
 		t.Skipf("Unable to open file: %s: %#v", path, err)
@@ -97,12 +92,7 @@ func htmlFileTest(t *testing.T, path string, expected testStruct) {
 	if err != nil {
 		t.Errorf("Invalid HTML in file: %s: %#v", path, err)
 	}
-	menuTable := doc.selectMenuTable()
-	actualResult := testStruct{
-		menuTable.parseBreakfastMenu(),
-		menuTable.parseLunchMenu(),
-		menuTable.parseDinnerMenu(),
-	}
+	actualResult := doc.Parse()
 	if !EqualTestStruct(actualResult, expected) {
 		t.Errorf("Values not equal: actual: %+v != expected: %+v", actualResult, closedDiningHall)
 	}
@@ -114,4 +104,8 @@ func TestClosedDiningHall(t *testing.T) {
 
 func TestWeekendDiningHall(t *testing.T) {
 	htmlFileTest(t, "./generic_weekend_open.html", weekendDiningHall)
+}
+
+func TestAll(t *testing.T) {
+	fmt.Println(ParseAll())
 }
