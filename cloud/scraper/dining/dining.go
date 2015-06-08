@@ -7,22 +7,22 @@ import (
 )
 
 const (
-	website_format= "http://nutrition.sa.ucsc.edu/menuSamp.asp?locationNum=%d"
+	website_format= "http://nutrition.sa.ucsc.edu/menuSamp.asp?locationNum=%s"
 )
 
 var (
 	dhalls = []diningId{
-		{"Cowell", 5},
-		{"Crown & Merill", 20},
-		{"Porter", 25},
-		{"College Eight", 30},
-		{"College Nine & Ten", 40},
+		{"Cowell", "05"},
+		{"Crown & Merill", "20"},
+		{"Porter", "25"},
+		{"College Eight", "30"},
+		{"College Nine & Ten", "40"},
 	}
 )
 
 type diningId struct {
 	name string
-	locNum int
+	locId string
 }
 
 type DiningLocation struct {
@@ -39,7 +39,7 @@ func handleUrlError(err error, url string) {
 func ParseAll() []DiningLocation {
 	menus := make([]DiningLocation, len(dhalls))
 	for i, v := range dhalls {
-		url := fmt.Sprintf(website_format, v.locNum)
+		url := fmt.Sprintf(website_format, v.locId)
 		menu, err := scraper.NewFromURL(url)
 		handleUrlError(err, url)
 		menus[i] = DiningLocation{v.name, menuDoc{menu}.Parse()}

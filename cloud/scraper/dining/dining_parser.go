@@ -2,10 +2,11 @@ package dining
 
 import (
 	"github.com/ucscstudentapp/cloud/scraper"
+	"strings"
 )
 
 var (
-	MENU_TABLE_PATH = []scraper.Node{
+	menu_table_path = []scraper.Node{
 		{"html", scraper.UNIQ},
 		{"body", scraper.UNIQ},
 		{"table", 0},
@@ -13,7 +14,7 @@ var (
 		{"tr", scraper.UNIQ},
 		{"td", scraper.ALL},
 	}
-	MENU_ROWS_PATH = []scraper.Node{
+	menu_rows_path = []scraper.Node{
 		{"table", scraper.UNIQ},
 		{"tbody", scraper.UNIQ},
 		{"tr", 1},
@@ -22,14 +23,20 @@ var (
 		{"tbody", scraper.UNIQ},
 		{"tr", scraper.UNIQ},
 	}
-	ROW_NAME_PATH = []scraper.Node{
+	row_item_path = []scraper.Node{
 		{"td", 0},
 		{"table", scraper.UNIQ},
 		{"tbody", scraper.UNIQ},
 		{"tr", scraper.UNIQ},
-		{"td", scraper.UNIQ},
+	}
+	item_name_path = []scraper.Node{
+		{"td", 0},
 		{"div.menusamprecipes", scraper.UNIQ},
 		{"span", scraper.UNIQ},
+	}
+	item_attrib_path = []scraper.Node{
+		{"td", scraper.ALL},
+		{"img", scraper.ALL},
 	}
 )
 
@@ -38,6 +45,10 @@ type menuTable struct {
 }
 
 type menuDoc struct {
+	scraper.Selection
+}
+
+type menuItemNode struct {
 	scraper.Selection
 }
 
@@ -51,15 +62,35 @@ type MealMenu []MenuItem
 
 type MenuItem struct {
 	Name string `json:"name"`
+	Attribs []string `json:"attribs"`
+}
+
+func (node menuItemNode) parse() MenuItem {
+	nameNode := node.Path(item_name_path)
+	attribNodes := node.Path(item_attrib_path).Nodes()
+	name := nameNode.Inner(0).Data
+	attribs := make([]string, len(attribNodes))
+	for i, v := range attribNodes {
+		var srcVal string
+		for _, vi := range v.Attr {
+			if vi.Key == "src" {
+				srcVal = vi.Val
+			}
+		}
+		srcVal = strings.Replace(srcVal,"LegendImages/", "", -1)
+		srcVal = strings.Replace(srcVal,".gif", "", -1)
+		attribs[i] = srcVal
+	}
+	return MenuItem{name, attribs}
 }
 
 func (table menuTable) parseMenuItems(idx int) []MenuItem {
-	rows := table.Index(idx).Path(MENU_ROWS_PATH)
+	rows := table.Index(idx).Path(menu_rows_path)
 	size := rows.Size()
 	items := make([]MenuItem, size)
 	for i := 0; i < size ; i++ {
-		menuNameNode := rows.Index(i).Path(ROW_NAME_PATH)
-		items[i] = MenuItem{menuNameNode.Inner(0).Data}
+		node := menuItemNode{rows.Index(i).Path(row_item_path)}
+		items[i] = node.parse()
 	}
 	return items
 }
@@ -95,7 +126,7 @@ func (table menuTable) parseDinnerMenu() []MenuItem {
 
 
 func (doc menuDoc) selectMenuTable() menuTable {
-	sel := doc.Path(MENU_TABLE_PATH)
+	sel := doc.Path(menu_table_path)
 	return menuTable{sel}
 }
 

@@ -2,6 +2,7 @@ package dining
 
 import (
 	"testing"
+	"encoding/json"
 	"os"
 	"fmt"
 	"github.com/ucscstudentapp/cloud/scraper"
@@ -15,51 +16,52 @@ var (
 	}
 	weekendDiningHall = Menu{
 		nil,
-		[]MenuItem{{"Mushroom & Barley Soup"},
-			{"Stockpot Vegan Chili"},
-			{"Apple Crepes Nancy"},
-			{"Cage Free Scrambled Eggs"},
-			{"Eggs Benedict"},
-			{"Hard cooked Cage Free Eggs"},
-			{"Natural BridgesTofu Scramble"},
-			{"Oatmeal Gluten-Free"},
-			{"Tator Tots"},
-			{"3 Berry Muffin"},
-			{"Blueberry Muffin"},
-			{"Cowboy Cookies"},
-			{"Donut Raised"},
-			{"French Rolls"},
-			{"Nutella Cheese Danish"},
-			{"Orange Cream Cheese Spice Cake"},
-			{"Paul's Vegan Cookies"},
-			{"Bar Pasta"},
-			{"Bread Sticks"},
-			{"Cheese Manicotti with Marinara"},
-			{"Condiments"},
-			{"Marinara Sauce"},
-			{"Meatballs"},
-			{"Pasta Bar"},
-			{"Penne"},
-			{"Puttanesca Sauce"},
+		[]MenuItem{
+			{"Mushroom & Barley Soup", nil},
+			{"Stockpot Vegan Chili", nil},
+			{"Apple Crepes Nancy", nil},
+			{"Cage Free Scrambled Eggs", nil},
+			{"Eggs Benedict", nil},
+			{"Hard cooked Cage Free Eggs", nil},
+			{"Natural BridgesTofu Scramble", nil},
+			{"Oatmeal Gluten-Free", nil},
+			{"Tator Tots", nil},
+			{"3 Berry Muffin", nil},
+			{"Blueberry Muffin", nil},
+			{"Cowboy Cookies", nil},
+			{"Donut Raised", nil},
+			{"French Rolls", nil},
+			{"Nutella Cheese Danish", nil},
+			{"Orange Cream Cheese Spice Cake", nil},
+			{"Paul's Vegan Cookies", nil},
+			{"Bar Pasta", nil},
+			{"Bread Sticks", nil},
+			{"Cheese Manicotti with Marinara", nil},
+			{"Condiments", nil},
+			{"Marinara Sauce", nil},
+			{"Meatballs", nil},
+			{"Pasta Bar", nil},
+			{"Penne", nil},
+			{"Puttanesca Sauce", nil},
 		},
 		[]MenuItem{
-			{"Korean BBQ Pork Spareribs"},
-			{"Sizzling Thai Chicken Salad"}, 
-			{"Sizzling Thai Seitan Salad"}, 
-			{"5 Spice BBQ Beef Chow Mein"}, 
-			{"5 Spice BBQ Tofu Chow Mein"}, 
-			{"Veggie Fried Rice"}, 
-			{"Chocolate Cream Pie"}, 
-			{"French Rolls"}, 
-			{"Orange Cream Cheese Spice Cake"}, 
-			{"Bar Pasta"}, 
-			{"Bread Sticks"}, 
-			{"Cheese Manicotti with Marinara"}, 
-			{"Condiments"}, 
-			{"Marinara Sauce"}, 
-			{"Meatballs"}, 
-			{"Penne"}, 
-			{"Puttanesca Sauce"},
+			{"Korean BBQ Pork Spareribs", nil},
+			{"Sizzling Thai Chicken Salad", nil}, 
+			{"Sizzling Thai Seitan Salad", nil}, 
+			{"5 Spice BBQ Beef Chow Mein", nil}, 
+			{"5 Spice BBQ Tofu Chow Mein", nil}, 
+			{"Veggie Fried Rice", nil}, 
+			{"Chocolate Cream Pie", nil}, 
+			{"French Rolls", nil}, 
+			{"Orange Cream Cheese Spice Cake", nil}, 
+			{"Bar Pasta", nil}, 
+			{"Bread Sticks", nil}, 
+			{"Cheese Manicotti with Marinara", nil}, 
+			{"Condiments", nil}, 
+			{"Marinara Sauce", nil}, 
+			{"Meatballs", nil}, 
+			{"Penne", nil}, 
+			{"Puttanesca Sauce", nil},
 		},
 	}
 )
@@ -69,7 +71,7 @@ func EqualMenuItems(this, that []MenuItem) bool {
 		return false
 	}
 	for i := 0; i < len(this); i++ {
-		if this[i] != that[i] {
+		if this[i].Name != that[i].Name {
 			return false
 		}
 	}
@@ -107,5 +109,6 @@ func TestWeekendDiningHall(t *testing.T) {
 }
 
 func TestAll(t *testing.T) {
-	fmt.Println(ParseAll())
+	byte, _ := json.Marshal(ParseAll())
+	fmt.Println(string(byte))
 }

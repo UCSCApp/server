@@ -59,6 +59,10 @@ func (sel Selection) Size() int {
 	return sel.impl.Size()
 }
 
+func (sel Selection) Nodes() []*html.Node {
+	return sel.impl.Nodes
+}
+
 func (sel Selection) Inner(idx int) *html.Node {
 	return sel.impl.Contents().Get(idx)
 }
