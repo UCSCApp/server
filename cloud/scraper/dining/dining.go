@@ -1,13 +1,13 @@
 package dining
 
 import (
-	"github.com/ucscstudentapp/cloud/scraper"
 	"fmt"
+	"github.com/ucscstudentapp/cloud/scraper"
 	"log"
 )
 
 const (
-	website_format= "http://nutrition.sa.ucsc.edu/menuSamp.asp?locationNum=%s"
+	website_format = "http://nutrition.sa.ucsc.edu/menuSamp.asp?locationNum=%s"
 )
 
 var (
@@ -21,13 +21,13 @@ var (
 )
 
 type diningId struct {
-	name string
+	name  string
 	locId string
 }
 
 type DiningLocation struct {
 	Name string `json:"name"`
-	Menu Menu`json:"items"`
+	Menu Menu   `json:"items"`
 }
 
 func handleUrlError(err error, url string) {

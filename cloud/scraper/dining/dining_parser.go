@@ -54,14 +54,14 @@ type menuItemNode struct {
 
 type Menu struct {
 	Breakfast MealMenu `json:"breakfast"`
-	Lunch MealMenu `json:"lunch"`
-	Dinner MealMenu `json:"dinner"`
+	Lunch     MealMenu `json:"lunch"`
+	Dinner    MealMenu `json:"dinner"`
 }
 
 type MealMenu []MenuItem
 
 type MenuItem struct {
-	Name string `json:"name"`
+	Name    string   `json:"name"`
 	Attribs []string `json:"attribs"`
 }
 
@@ -77,8 +77,8 @@ func (node menuItemNode) parse() MenuItem {
 				srcVal = vi.Val
 			}
 		}
-		srcVal = strings.Replace(srcVal,"LegendImages/", "", -1)
-		srcVal = strings.Replace(srcVal,".gif", "", -1)
+		srcVal = strings.Replace(srcVal, "LegendImages/", "", -1)
+		srcVal = strings.Replace(srcVal, ".gif", "", -1)
 		attribs[i] = srcVal
 	}
 	return MenuItem{name, attribs}
@@ -88,7 +88,7 @@ func (table menuTable) parseMenuItems(idx int) []MenuItem {
 	rows := table.Index(idx).Path(menu_rows_path)
 	size := rows.Size()
 	items := make([]MenuItem, size)
-	for i := 0; i < size ; i++ {
+	for i := 0; i < size; i++ {
 		node := menuItemNode{rows.Index(i).Path(row_item_path)}
 		items[i] = node.parse()
 	}
@@ -123,7 +123,6 @@ func (table menuTable) parseDinnerMenu() []MenuItem {
 		return table.parseMenuItems(2)
 	}
 }
-
 
 func (doc menuDoc) selectMenuTable() menuTable {
 	sel := doc.Path(menu_table_path)

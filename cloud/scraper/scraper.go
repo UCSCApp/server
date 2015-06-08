@@ -1,10 +1,10 @@
 package scraper
 
 import (
-	"io"
 	"fmt"
 	"github.com/PuerkitoBio/goquery"
 	"golang.org/x/net/html"
+	"io"
 )
 
 type Node struct {
@@ -13,8 +13,8 @@ type Node struct {
 }
 
 const (
-	UNIQ    = -1
-	ALL     = -2
+	UNIQ = -1
+	ALL  = -2
 )
 
 type Selection struct {
@@ -31,7 +31,6 @@ func (sel Selection) PrintChildren() {
 	children := Selection{sel.impl.Children()}
 	children.Print()
 }
-
 
 func NewFromURL(url string) (Selection, error) {
 	doc, err := goquery.NewDocument(url)
@@ -71,7 +70,7 @@ func (sel Selection) Path(nodes []Node) Selection {
 	final := sel
 	for _, v := range nodes {
 		final = final.ChildrenFilter(v.Name)
-		if idx := v.Idx; idx != UNIQ && idx != ALL{
+		if idx := v.Idx; idx != UNIQ && idx != ALL {
 			final = final.Index(idx)
 		}
 	}

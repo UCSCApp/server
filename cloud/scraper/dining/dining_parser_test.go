@@ -1,11 +1,11 @@
 package dining
 
 import (
-	"testing"
 	"encoding/json"
-	"os"
 	"fmt"
 	"github.com/ucscstudentapp/cloud/scraper"
+	"os"
+	"testing"
 )
 
 var (
@@ -46,21 +46,21 @@ var (
 		},
 		[]MenuItem{
 			{"Korean BBQ Pork Spareribs", nil},
-			{"Sizzling Thai Chicken Salad", nil}, 
-			{"Sizzling Thai Seitan Salad", nil}, 
-			{"5 Spice BBQ Beef Chow Mein", nil}, 
-			{"5 Spice BBQ Tofu Chow Mein", nil}, 
-			{"Veggie Fried Rice", nil}, 
-			{"Chocolate Cream Pie", nil}, 
-			{"French Rolls", nil}, 
-			{"Orange Cream Cheese Spice Cake", nil}, 
-			{"Bar Pasta", nil}, 
-			{"Bread Sticks", nil}, 
-			{"Cheese Manicotti with Marinara", nil}, 
-			{"Condiments", nil}, 
-			{"Marinara Sauce", nil}, 
-			{"Meatballs", nil}, 
-			{"Penne", nil}, 
+			{"Sizzling Thai Chicken Salad", nil},
+			{"Sizzling Thai Seitan Salad", nil},
+			{"5 Spice BBQ Beef Chow Mein", nil},
+			{"5 Spice BBQ Tofu Chow Mein", nil},
+			{"Veggie Fried Rice", nil},
+			{"Chocolate Cream Pie", nil},
+			{"French Rolls", nil},
+			{"Orange Cream Cheese Spice Cake", nil},
+			{"Bar Pasta", nil},
+			{"Bread Sticks", nil},
+			{"Cheese Manicotti with Marinara", nil},
+			{"Condiments", nil},
+			{"Marinara Sauce", nil},
+			{"Meatballs", nil},
+			{"Penne", nil},
 			{"Puttanesca Sauce", nil},
 		},
 	}
@@ -80,8 +80,8 @@ func EqualMenuItems(this, that []MenuItem) bool {
 
 func EqualTestStruct(this, that Menu) bool {
 	return EqualMenuItems(this.Breakfast, that.Breakfast) &&
-	       EqualMenuItems(this.Lunch, that.Lunch) &&
-	       EqualMenuItems(this.Dinner, that.Dinner)
+		EqualMenuItems(this.Lunch, that.Lunch) &&
+		EqualMenuItems(this.Dinner, that.Dinner)
 }
 
 func htmlFileTest(t *testing.T, path string, expected Menu) {
